@@ -1,7 +1,11 @@
 /*
-once you create the first node. "Insert" to add a child, arrow keys to navigate. F2 to edit the current node. Ctrl-Arrow up/down to reorder the child nodes
-"Enter" to finish editing, then again to create a new node at the same level
-space to collapse and expand a node.
+once you create the first node:
+	"Insert" to add a child;
+	arrow keys to navigate;
+	F2 to edit the current node;
+	Ctrl-Arrow up/down to reorder the child nodes;
+	"Enter" to finish editing, then again to create a new node at the same level;
+	space to collapse and expand a node;
 
 Help -> Documentation. click on the center node and press Ctrl-space
 */
