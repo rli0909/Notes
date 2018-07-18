@@ -1,3 +1,35 @@
 AJAX: Asynchronous Javascript and XML 
 优点: 伺服器回应快, 减少Web伺服器负荷, 在不更新整个页面情况下维护数据. 
 注意: 请求数据时的网络延迟问题, 通常使用可视化组建解决.
+
+-Larry:
+	ajax call
+	和普通的网页请求很像, 通过HTTP请求, 你发送个请求，这个请求会发给server, 这个是JAVASCRIP基本的AJAX call的function
+	根据请求的method决定数据是放在Header 还是Body
+	这里指的是HTTP请求包
+	
+	我写的js代码在DocStar中的调用是顺序调用执行，然后给变量赋值， 最好用callback去做， 用JQuery
+	ar ajaxPromise=$.ajax(params);
+	
+		ajaxPromise.success(function(data){ customizeSuccessHandler()});
+		ajaxPromise.error(function(error){ customizeErrorHandler()});
+		这么写很工整
+		
+	上级T写的js代码比较好， 另外还可以把success 和 error方法提取出来方便替换。
+		*了解关于解绑（unbinding）的知识。为了监听一个事件的发生，需要用到
+		$.off()
+		绑定用 on
+		解绑用off
+		例如：你饿了，你要监听，到7点你就饿了，这就绑定一个事件，不解绑，就是你每天到7点你都会饿，解绑了就是，你明天7点不会饿了
+		
+		是否需要解绑取决于逻辑，看具体情况。简单的说， 你感觉监听得事件触发了， 下次没有价值了， 就解绑。
+		
+		jQuery还有个方法， 如果你确定只触发一次事件， 用one， $.one()去绑定事件。
+		
+-Larry：
+	promise是异步请求的重点。
+		因为网络有延迟， 服务器需要事件处理请求， promised的强大之处就显示了
+		例如下载时候的进度条， 加载的小圈圈， 都是异步处理做的用户体验处理， 给用户反馈
+		（借助视觉组件， 来弥补用户体验）
+		
+		
