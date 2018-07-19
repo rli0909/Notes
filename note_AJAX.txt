@@ -1,5 +1,8 @@
+=======>> Study Notes: 7/18/2018 <<========
+
 AJAX: Asynchronous Javascript and XML 
 优点: 伺服器回应快, 减少Web伺服器负荷, 在不更新整个页面情况下维护数据. 
+load data from the server without a browser page refresh.
 注意: 请求数据时的网络延迟问题, 通常使用可视化组建解决.
 
 -Larry:
@@ -31,5 +34,13 @@ AJAX: Asynchronous Javascript and XML
 		因为网络有延迟， 服务器需要事件处理请求， promised的强大之处就显示了
 		例如下载时候的进度条， 加载的小圈圈， 都是异步处理做的用户体验处理， 给用户反馈
 		（借助视觉组件， 来弥补用户体验）
+		
+=======>> Study Notes: 7/19/2018 <<========		
+
+settings
+	A set of key/value pairs that configure the Ajax request. All settings are optional. A default can be set for any option with $.ajaxSetup() 
+		==example==> $.ajaxSetup({url: "ping.php"});
+	
+
 		
 		
