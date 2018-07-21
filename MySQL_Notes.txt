@@ -1,0 +1,33 @@
+Delete a database: DROP DATABASE `db_name`;
+create a database: create database db_name;
+display databases: show databases;
+to modify database: use db_name;
+display all tables in database: show tables;
+
+create a table in database: 
+	create table tb_name(
+		->id INT NOT NULL,
+		->name VARCHAR(150) NOT NULL,
+		-> passw INT NOT NULL,
+		-> PRIMARY KEY (id)
+		-> );
+	// Query OK, 0 rows affected (0.53 sec)
+	
+display created table: describe tb_name;
+
+adding records into a table:
+	insert into tb_name(col_name1, col_name2, col_name3, ...) values
+	->('value1', 'value2', 'value3', ...),
+	->('value1', 'value2', 'value3', ...),
+	->('value1', 'value2', 'value3', ...),
+	->(......);
+	
+delete a column: 
+	alter table tb_name drop column col_name;
+
+add a column with zerofill feature: 
+	alter table tb_name add column col_name datatype zerofill;
+
+change datatype for a column in mysql (e.i., 987 ==> 0987):
+	alter table tb_name modify col_name datatype() zerofill; 
+		
